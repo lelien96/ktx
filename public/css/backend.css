@@ -1,0 +1,24 @@
+.error {
+    display: inline;
+    margin: 5px 0;
+    color: #00a0df;
+    font-weight: 400;
+}
+.wait {
+    display: none;
+}
+.loadding {
+    display:block;
+    width:120px;
+    height:120px;
+    top:50%;
+    left:50%;
+    position:fixed;
+    z-index: 1000;
+}
+.modal-img-custom {
+    width: 80px;
+}
+.modal-content-custom {
+    margin-left: 30px;
+}
