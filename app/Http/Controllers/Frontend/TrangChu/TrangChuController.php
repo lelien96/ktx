@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend\TrangChu;
 
 use App\Http\Controllers\Controller;
 use App\Service\ClassBaiViet\ClassBaiViet;
+use App\Service\PhongKTX\ClassPhongKTX;
 use DB;
 use Illuminate\Http\Request;
 

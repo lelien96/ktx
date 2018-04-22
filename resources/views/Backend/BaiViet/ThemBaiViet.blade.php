@@ -71,6 +71,11 @@
                           <option value="3">Giới thiệu</option>
                           <option value="4">Sơ đồ</option>
                           <option value="5">Liên hệ</option>
+                          <option value="6">Hướng dẫn</option>
+                          <option value="7">Dịch Vụ</option>
+                          <option value="8">Nội quy</option>
+                          <option value="9">Video</option>
+                          <option value="10">Cơ Sở vật chất</option>
                       </select>
                     </div>
                   </div>

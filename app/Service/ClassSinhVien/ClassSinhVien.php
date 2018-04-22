@@ -35,6 +35,7 @@ class ClassSinhVien extends ServiceProvider
                 $result['success'] = 1;
             }
         } catch (\Exception $e) {
+            dd($e->getMessage());
             DB::rollBack();
         }
         return $result;

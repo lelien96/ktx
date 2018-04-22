@@ -14,6 +14,11 @@ Route::get('/', 'Frontend\TrangChu\TrangChuController@getHome')->name('trangchu'
 Route::get('/tim-kiem', 'Frontend\TrangChu\TrangChuController@timKiem')->name('timKiem');
 Route::get('/tin-tuc/{id}', 'Frontend\TrangChu\TrangChuController@noiDungBaiViet')->name('tintuc');
 Route::get('/gioi-thieu', 'Frontend\GioiThieu\GioiThieuController@getHome')->name('gioiThieu');
+Route::get('/huong-dan', 'Frontend\GioiThieu\GioiThieuController@huongDan')->name('huongDan');
+Route::get('/dich-vu', 'Frontend\GioiThieu\GioiThieuController@dichVu')->name('dichVu');
+Route::get('/noi-quy', 'Frontend\GioiThieu\GioiThieuController@noiQuy')->name('noiQuy');
+Route::get('/video', 'Frontend\GioiThieu\GioiThieuController@video')->name('video');
+Route::get('/co-so-vat-chat', 'Frontend\GioiThieu\GioiThieuController@coSoVatChat')->name('coSoVatChat');
 Route::get('/so-do', 'Frontend\GioiThieu\GioiThieuController@soDo')->name('soDo');
 Route::get('/lien-he', 'Frontend\GioiThieu\GioiThieuController@lienHe')->name('lienHe');
 Route::get('/dang-ky', 'Frontend\DangKy\DangKyController@getHome')->name('dangky');
@@ -21,8 +26,9 @@ Route::get('/dang-ky-ajax', 'Frontend\DangKy\DangKyController@ajax')->name('ajax
 Route::get('/dang-nhap', 'Frontend\DangNhap\DangNhapController@getHome');
 Route::post('/dang-nhap', 'Frontend\DangNhap\DangNhapController@dangNhap')->name("dangNhap");
 Route::get('/sinh-vien', 'Frontend\SinhVien\SinhVienController@getHome')->name('sinhVien');
-Route::get('/tra-cuu-sinh-vien', 'Frontend\SinhVien\SinhVienController@traCuu')->name('traCuuSinhVien')->middleware('checklogin');
+Route::get('/tra-cuu-sinh-vien', 'Frontend\SinhVien\SinhVienController@traCuu')->name('traCuuSinhVien')->middleware('CheckDangKySinhVien');
 Route::get('/sinh-vien-ajax', 'Frontend\SinhVien\SinhVienController@ajaxSinhVien')->name('ajaxSinhVien');
+Route::get('dang-ky-phong', 'Frontend\SinhVien\SinhVienController@dangKyPhong')->name('dangKyPhong');
 Route::group(['middleware' => 'checklogin'], function () {
     Route::get('admin/home', 'BackEnd\TrangChu\TrangChuController@getHome')->name('adminHome');
     Route::get('admin/them-tai-khoan', 'BackEnd\TaiKhoan\ThemTaiKhoancontroller@getHome')->name('adminAddUser');
@@ -48,4 +54,7 @@ Route::group(['middleware' => 'checklogin'], function () {
     Route::post('admin/sua-tai-san', 'Backend\TaiSan\TaiSanController@suaTaiSanDB')->name('suaTaiSanDB');
     Route::get('admin/them-sinh-vien', 'Backend\SinhVien\SinhVienController@themSinhVien')->name('themSinhVien');
     Route::post('admin/sinh-vien-ajax', 'Backend\SinhVien\SinhVienController@ajaxSinhVien')->name('sinhVienAjax');
+    Route::get('admin/don-dang-ky', 'Backend\SinhVien\SinhVienController@donDangKy')->name('donDangKy');
+    Route::get('admin/danh-sach-sinh-vien-ktx', 'Backend\SinhVien\SinhVienController@danhSach')->name('danhSachKTX');
+    Route::get('admin/quan-ly-phong', 'Backend\SinhVien\SinhVienController@quanLyPhong')->name('quanLyPhong');
 });

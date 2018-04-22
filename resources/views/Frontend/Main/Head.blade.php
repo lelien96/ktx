@@ -27,7 +27,7 @@
               <a class="navbar-brand" href="{{ route('sinhVien') }}" style="color: #fff">SINH VIÊN</a>
             </div>
             <div class="navbar-header">
-              <a class="navbar-brand" href="#" style="color: #fff">HƯỚNG DẪN</a>
+              <a class="navbar-brand" href="{{ route('huongDan') }}" style="color: #fff">HƯỚNG DẪN</a>
             </div>
             <div class="navbar-header">
               <a class="navbar-brand" href="{{ route('soDo') }}" style="color: #fff">SƠ ĐỒ</a>
@@ -56,15 +56,15 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                   <div class="item active">
-                    <img src="{{asset('img/dhsp1.jpg')}}" alt="Los Angeles" style="height: 550px; width: 100%">
+                    <img src="{{asset('img/dhsp1.jpg')}}" alt="Los Angeles" style="height: 400px; width: 100%">
                   </div>
 
                   <div class="item">
-                    <img src="{{asset('img/dhsp2.jpg')}}" alt="Chicago" style="height: 550px; width: 100%">
+                    <img src="{{asset('img/dhsp2.jpg')}}" alt="Chicago" style="height: 400px; width: 100%">
                   </div>
 
                   <div class="item">
-                    <img src="{{asset('img/dhsp3.jpg')}}" alt="New york" style="height: 550px; width: 100%">
+                    <img src="{{asset('img/dhsp3.jpg')}}" alt="New york" style="height: 400px; width: 100%">
                   </div>
                 </div>
 

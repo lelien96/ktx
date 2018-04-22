@@ -4,15 +4,15 @@
 @endsection
 @section('content')
 <div class="col-xs-12 content-1">
-    <div>Họ và tên:*</div>
+    <div>Họ và tên:</div>
     <div><input id="name" class="form-control" type="text" name=""></div>
-    <div>Lớp/ Khoa:*</div>
+    <div>Lớp/ Khoa:</div>
     <div><input id="lop" class="form-control" type="text" name=""></div>
     <div>Mã sinh viên:*</div>
     <div><input id="masv" class="form-control" type="text" name=""></div>
-    <div>Email/ Số điện thoại:*</div>
+    <div>Email/ Số điện thoại:</div>
     <div><input id="email" class="form-control" type="text" name=""></div>
-    <div>Tên người dùng:*</div>
+    <div>Tên người dùng:</div>
     <div><input id="usename" class="form-control" type="text" name=""></div>
     <div>Mật khẩu:*</div>
     <div><input id="password" class="form-control" type="password" name=""></div>
@@ -20,7 +20,7 @@
     <div><input id="repassword" class="form-control" type="password" name=""></div>
     <div class="error" id="error"></div>
     <div class="error" id="error2"></div>
-    <div class="dangky-1"><button id="dangky" type="button" class="btn btn-success">Đăng ký</button><a href="">   Nếu bạn đã có tài khoản mời đăng nhập vào hệ thông</a></div>
+    <div class="dangky-1"><button id="dangky" type="button" class="btn btn-success">Đăng ký</button><a href="{{ route('dangNhap') }}">   Nếu bạn đã có tài khoản mời đăng nhập vào hệ thông</a></div>
 </div>
 <!-- Modal -->
 <div class="modal fade" id="modal-success" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -128,9 +128,9 @@
         $('#error').html(error);
     }
     function checkEmail(){
-        var email = $('#email').val();
-        if (email == '') {
-            error2 = 'Email không được để trống';
+        var masv = $('#masv').val();
+        if (masv == '') {
+            error2 = 'Mã sinh viên không được để trống';
         } else {
             error2 = '';
         }

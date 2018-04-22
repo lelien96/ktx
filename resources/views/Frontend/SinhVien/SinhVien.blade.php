@@ -7,7 +7,7 @@ Sinh Viên
 <div class="col-xs-12 content-1">
     <div class="col-xs-12 gioithieu-1">Sinh viên</div>
     <div><a href="{{ route('traCuuSinhVien') }}">Tra cứu đơn đăng ký</div>
-    <div><a href="">Đăng ký phòng</div>
+    <div><a href="{{ route('dangKyPhong') }}">Đăng ký phòng</div>
 </div>
 @else
 <div class="col-xs-12 content-1">

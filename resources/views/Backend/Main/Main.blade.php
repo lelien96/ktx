@@ -45,7 +45,7 @@
       </div>
 
       <!--logo start-->
-      <a href="index.html" class="logo">Nice <span class="lite">Admin</span></a>
+      <a href="{{ route('adminHome') }}" class="logo">Nice <span class="lite">Admin</span></a>
       <!--logo end-->
 
       <div class="nav search-row" id="top_menu">
@@ -307,7 +307,7 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
           <li class="active">
-            <a class="" href="index.html">
+            <a class="" href="{{ route('adminHome') }}">
                           <i class="icon_house_alt"></i>
                           <span>Dashboard</span>
                       </a>
@@ -332,7 +332,6 @@
             <ul class="sub">
               <li><a class="" href="{{ route('themTaiSan') }}">Thêm tài sản</a></li>
               <li><a class="" href="{{ route('quanLyTaiSan') }}">Quản lý tài sản</a></li>
-              <li><a class="" href="grids.html">Grids</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -346,23 +345,16 @@
               <li><a class="" href="">Quản lý sinh viên</a></li>
             </ul>
           </li>
-          <li>
-            <a class="" href="chart-chartjs.html">
-                          <i class="icon_piechart"></i>
-                          <span>Charts</span>
-
-                      </a>
-
-          </li>
-
           <li class="sub-menu">
             <a href="javascript:;" class="">
                           <i class="icon_table"></i>
-                          <span>Tables</span>
+                          <span>Phòng ký túc xá</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="basic_table.html">Basic Table</a></li>
+              <li><a class="" href="{{ route('donDangKy') }}">Đơn đăng ký</a></li>
+              <li><a class="" href="{{ route('danhSachKTX') }}">Danh sách KTX</a></li>
+              <li><a class="" href="{{ route('quanLyPhong') }}">Quản Lý Phòng</a></li>
             </ul>
           </li>
 
@@ -375,9 +367,6 @@
             <ul class="sub">
               <li><a class="" href="{{route('themBaiViet')}}">Thêm bài viết</a></li>
               <li><a class="" href="{{route('quanLyBaiViet')}}"><span>Quản lý bài viết</span></a></li>
-              <li><a class="" href="contact.html"><span>Contact Page</span></a></li>
-              <li><a class="" href="blank.html">Blank Page</a></li>
-              <li><a class="" href="404.html">404 Error</a></li>
             </ul>
           </li>
 

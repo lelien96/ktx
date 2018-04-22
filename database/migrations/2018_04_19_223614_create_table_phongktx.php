@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableUser extends Migration
+class CreateTablePhongktx extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateTableUser extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('phongktx', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('masv')->unique();
-            $table->string('lopkhoa');
-            $table->string('email');
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('maphong')->unique();;
+            $table->string('chotrong')->default('6');
+            $table->string('soluongdat');
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ class CreateTableUser extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        //
     }
 }

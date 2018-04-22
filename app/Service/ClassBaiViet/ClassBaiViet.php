@@ -254,4 +254,13 @@ class ClassBaiViet extends ServiceProvider
             ->first();
         return $tinLienHe;
     }
+
+    public static function loaiTin($loaiTin)
+    {
+        $tin = DB::table('posts')
+            ->where('loaitin', $loaiTin)
+            ->orderBy('created_at', 'desc')
+            ->first();
+        return $tin;
+    }
 }

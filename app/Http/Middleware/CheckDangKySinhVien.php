@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Session;
 
-class CheckLogin
+class CheckDangKySinhVien
 {
     /**
      * Handle an incoming request.
@@ -16,9 +16,7 @@ class CheckLogin
      */
     public function handle($request, Closure $next)
     {
-        $checkQuyen = Session::get('user.chucvu');
-        $arrayCheck = ['2', '3'];
-        if (in_array($checkQuyen, $arrayCheck)) {
+        if (Session::has('user.id')) {
             return $next($request);
         } else {
             return redirect('/');

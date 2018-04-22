@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('bootstrap/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-datepicker.min.css') }}">
 </head>
 <body>
 <div class="body">
@@ -17,6 +18,14 @@
 <script type="text/javascript" src="{{ asset('bootstrap/js/jquery-3.3.1.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+<script src="{{asset('js/bootstrap-datepicker.min.js')}}"></script>
 @yield('script')
+<script type="text/javascript">
+$(function () {
+      $('.datetimepicker').datepicker({
+        format:'yyyy-mm-dd',
+      });
+});
+</script>
 </body>
 </html>

@@ -7,8 +7,8 @@
     <div class="col-xs-12 dangnhap-1">Đăng Nhập</div>
     <div class="col-xs-12">
         <div class="form-group">
-            <label for="email">Tài Khoản</label>
-            <input id="email" type="email" class="form-control">
+            <label for="email">Mã sinh viên</label>
+            <input id="email" type="text" class="form-control">
         </div>
         <div class="form-group">
             <label for="pwd">Mật khẩu:</label>
@@ -42,11 +42,11 @@
 @endsection
 @section('script')
 <script type="text/javascript">
+$('body').prepend('<div id="wait" class="wait"><img class="loadding" src="{{ asset('img/Spinner.gif') }}"" width="120" height="120" /></div>');
 $(document).ready(function(){
     dangnhap();
 })
 function dangnhap(){
-    $('body').prepend('<div id="wait" class="wait"><img class="loadding" src="{{ asset('img/Spinner.gif') }}"" width="120" height="120" /></div>');
     $('#dangnhap').click(function(){
         var email = $('#email').val();
         var password = $('#password').val();
